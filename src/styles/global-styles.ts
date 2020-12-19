@@ -22,7 +22,8 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
   body {
     font-family: infoLight, Helvetica, Arial, sans-serif;
-    background-color:${props => props.theme.colors.background}
+    background-color:${props => props.theme.colors.background};
+    color:${props => props.theme.colors.dark};
   }
 
   #root {
