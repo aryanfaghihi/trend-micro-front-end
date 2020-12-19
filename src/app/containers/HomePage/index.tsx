@@ -1,5 +1,7 @@
+import { Colored, Sentence } from 'app/components/Sentence';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
+import styled from 'styled-components/macro';
 
 export function HomePage() {
   return (
@@ -8,7 +10,15 @@ export function HomePage() {
         <title>Home Page</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
-      <span>HomePage container</span>
+      <SentenceContainer>
+        <Sentence>
+          <Colored>Good Morning</Colored> human!
+        </Sentence>
+      </SentenceContainer>
     </>
   );
 }
+const SentenceContainer = styled.div`
+  width: 50%;
+  margin: 10%;
+`;
